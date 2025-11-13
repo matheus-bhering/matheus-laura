@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de Juros Simples - Explicação Didática</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+        
+        .explicacao-inicial {
+            background: #e3f2fd;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 5px solid #1976d2;
+        }
+        
+        .explicacao-inicial h2 {
+            color: #1976d2;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        
+        .explicacao-inicial p {
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+        
+        .formula-box {
+            background: #fff9c4;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border: 2px solid #fbc02d;
+        }
+        
+        .formula-box strong {
+            color: #f57c00;
+            font-size: 18px;
+        }
+        
+        .passo {
+            background: #f3e5f5;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 4px solid #9c27b0;
+        }
+        
+        .exercicio {
+            margin-bottom: 50px;
+            page-break-inside: avoid;
+            border: 2px solid #e0e0e0;
+            padding: 25px;
+            border-radius: 10px;
+        }
+        
+        .enunciado {
+            color: #1e5ba8;
+            font-weight: 600;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            font-size: 17px;
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        .dica {
+            background: #fff3e0;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #ff9800;
+        }
+        
+        .dica strong {
+            color: #e65100;
+        }
+        
+        .resolucao {
+            font-family: 'Caveat', cursive;
+            font-size: 22px;
+            color: #333;
+            line-height: 2;
+            padding: 20px;
+            background: linear-gradient(to bottom, transparent 95%, #e8e8e8 95%);
+            background-size: 100% 40px;
+        }
+        
+        .destaque {
+            background: #c8e6c9;
+            padding: 8px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            font-weight: bold;
+            border: 2px solid #4caf50;
+        }
+        
+        .atencao {
+            background: #ffebee;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #f44336;
+        }
+        
+        .atencao strong {
+            color: #c62828;
+        }
+        
+        .btn-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .btn-download {
+            background: #4CAF50;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .btn-download:hover {
+            background: #45a049;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+            .btn-container {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Exercícios de Juros Simples - Guia Completo e Didático</h1>
+        
+        <div class="explicacao-inicial">
+            <h2>🎯 Como Resolver Exercícios de Juros Simples - Passo a Passo</h2>
+            
+            <div class="formula-box">
+                <strong>📐 FÓRMULAS PRINCIPAIS:</strong><br>
+                <strong style="font-size: 20px;">J = C × i × t</strong> (para calcular os juros)<br>
+                <strong style="font-size: 20px;">M = C + J</strong> (para calcular o montante)
+            </div>
+            
+            <p><strong>Onde:</strong></p>
+            <p>📌 <strong>C</strong> = Capital (dinheiro inicial aplicado)</p>
+            <p>📌 <strong>i</strong> = Taxa de juros (sempre em decimal: divide por 100!)</p>
+            <p>📌 <strong>t</strong> = Tempo (mesma unidade da taxa)</p>
+            <p>📌 <strong>J</strong> = Juros (quanto de dinheiro você ganhou)</p>
+            <p>📌 <strong>M</strong> = Montante (dinheiro total no final = capital + juros)</p>
+            
+            <div class="passo">
+                <strong>PASSO 1:</strong> Identifique os dados (C, i, t)
+            </div>
+            <div class="passo">
+                <strong>PASSO 2:</strong> Transforme a taxa em decimal (divida por 100)
+            </div>
+            <div class="passo">
+                <strong>PASSO 3:</strong> Deixe o tempo na mesma unidade da taxa!
+            </div>
+            <div class="passo">
+                <strong>PASSO 4:</strong> Calcule J = C × i × t
+            </div>
+            <div class="passo">
+                <strong>PASSO 5:</strong> Calcule M = C + J
+            </div>
+        </div>
+        
+        <!-- EXERCÍCIO 1 -->
+        <div class="exercicio">
+            <div class="enunciado">
+                <strong>1. Exemplo/Exercício</strong><br>
+                Um capital de R$ 2.100,00 fica aplicado a uma taxa de 12% ao mês durante 2 anos e 3 meses. Qual será o juros e montante produzido?
+            </div>
+            
+            <div class="dica">
+                <strong>💡 DICA IMPORTANTE:</strong> A taxa está em MESES (12% ao mês), então o tempo também precisa estar em MESES!<br>
+                2 anos e 3 meses = (2 × 12) + 3 = 24 + 3 = <strong>27 meses</strong>
+            </div>
+            
+            <div class="resolucao">
+                <strong>📋 PASSO 1 - Identificar os dados:</strong><br>
+                C = R$ 2.100,00<br>
+                i = 12% ao mês<br>
+                t = 2 anos e 3 meses<br><br>
+                
+                <strong>🔄 PASSO 2 - Transformar a taxa em decimal:</strong><br>
+                i = 12% = 12 ÷ 100 = 0,12<br><br>
+                
+                <strong>⏰ PASSO 3 - Ajustar o tempo (mesma unidade da taxa):</strong><br>
+                Taxa está em MESES, então:<br>
+                t = 2 anos e 3 meses = 27 meses<br><br>
+                
+                <strong>➕ PASSO 4 - Calcular os JUROS:</strong><br>
+                J = C × i × t<br>
+                J = 2.100 × 0,12 × 27<br>
+                J = 252 × 27<br>
+                J = 6.804,00<br><br>
+                
+                <strong>💰 PASSO 5 - Calcular o MONTANTE:</strong><br>
+                M = C + J<br>
+                M = 2.100 + 6.804<br>
+                M = 8.904,00<br><br>
+                
+                <span class="destaque">✅ Juros = R$ 6.804,00</span><br>
+                <span class="destaque">✅ Montante = R$ 8.904,00</span>
+            </div>
+        </div>
+        
+        <!-- EXERCÍCIO 2 -->
+        <div class="exercicio">
+            <div class="enunciado">
+                <strong>2. Exercício</strong><br>
+                Um capital de R$ 1.920,00 ficou aplicado a uma taxa de 0,9% ao mês durante 3 anos e 5 meses. Quais os juros e o montante gerados?
+            </div>
+            
+            <div class="dica">
+                <strong>💡 DICA:</strong> Taxa está em MESES (0,9% ao mês).<br>
+                3 anos e 5 meses = (3 × 12) + 5 = 36 + 5 = <strong>41 meses</strong>
+            </div>
+            
+            <div class="resolucao">
+                <strong>📋 PASSO 1 - Dados:</strong><br>
+                C = R$ 1.920,00<br>
+                i = 0,9% ao mês<br>
+                t = 3 anos e 5 meses<br><br>
+                
+                <strong>🔄 PASSO 2 - Taxa em decimal:</strong><br>
+                i = 0,9% = 0,9 ÷ 100 = 0,009<br><br>
+                
+                <strong>⏰ PASSO 3 - Tempo em meses:</strong><br>
+                t = 3 anos e 5 meses = 41 meses<br><br>
+                
+                <strong>➕ PASSO 4 - Juros:</strong><br>
+                J = C × i × t<br>
+                J = 1.920 × 0,009 × 41<br>
+                J = 17,28 × 41<br>
+                J = 708,48<br><br>
+                
+                <strong>💰 PASSO 5 - Montante:</strong><br>
+                M = C + J<br>
+                M = 1.920 + 708,48<br>
+                M = 2.628,48<br><br>
+                
+                <span class="destaque">✅ Juros = R$ 708,48</span><br>
+                <span class="destaque">✅ Montante = R$ 2.628,48</span>
+            </div>
+        </div>
+        
+        <!-- EXERCÍCIO 3 -->
+        <div class="exercicio">
+            <div class="enunciado">
+                <strong>3. Exercício</strong><br>
+                Um capital de R$ 900,00 ficou aplicado a uma taxa anual de 15,6%. Quais os juros e o montante produzidos após 1 ano e 8 meses?
+            </div>
+            
+            <div class="atencao">
+                <strong>⚠️ ATENÇÃO:</strong> A taxa está em ANOS (15,6% ao ano), então o tempo precisa estar em ANOS!<br>
+                1 ano e 8 meses = 1 ano + (8 ÷ 12) ano = 1 + 0,6667 = <strong>1,6667 anos</strong><br>
+                <em>Ou você pode usar a fração: 1 ano e 8 meses = 20/12 anos</em>
+            </div>
+            
+            <div class="resolucao">
+                <strong>📋 PASSO 1 - Dados:</strong><br>
+                C = R$ 900,00<br>
+                i = 15,6% ao ano<br>
+                t = 1 ano e 8 meses<br><br>
+                
+                <strong>🔄 PASSO 2 - Taxa em decimal:</strong><br>
+                i = 15,6% = 15,6 ÷ 100 = 0,156<br><br>
+                
+                <strong>⏰ PASSO 3 - Tempo em anos:</strong><br>
+                t = 1 ano e 8 meses<br>
+                t = 1 + (8 ÷ 12)<br>
+                t = 1 + 0,6667<br>
+                t = 1,6667 anos (ou 20/12)<br><br>
+                
+                <strong>➕ PASSO 4 - Juros:</strong><br>
+                J = C × i × t<br>
+                J = 900 × 0,156 × 1,6667<br>
+                J = 140,4 × 1,6667<br>
+                J = 234,00<br><br>
+                
+                <strong>💰 PASSO 5 - Montante:</strong><br>
+                M = C + J<br>
+                M = 900 + 234<br>
+                M = 1.134,00<br><br>
+                
+                <span class="destaque">✅ Juros = R$ 234,00</span><br>
+                <span class="destaque">✅ Montante = R$ 1.134,00</span>
+            </div>
+        </div>
+        
+        <!-- EXERCÍCIO 4 -->
+        <div class="exercicio">
+            <div class="enunciado">
+                <strong>4. Exercício</strong><br>
+                Um capital de R$ 2.400,00 foi aplicado a uma taxa de 5,4% ao semestre durante 2 anos e 6 meses. Quais os juros e o montante produzidos?
+            </div>
+            
+            <div class="dica">
+                <strong>💡 DICA:</strong> A taxa está em SEMESTRES (5,4% ao semestre).<br>
+                Lembre-se: 1 semestre = 6 meses, então 1 ano = 2 semestres<br>
+                2 anos e 6 meses = (2 × 2) + 1 = 4 + 1 = <strong>5 semestres</strong>
+            </div>
+            
+            <div class="resolucao">
+                <strong>📋 PASSO 1 - Dados:</strong><br>
+                C = R$ 2.400,00<br>
+                i = 5,4% ao semestre<br>
+                t = 2 anos e 6 meses<br><br>
+                
+                <strong>🔄 PASSO 2 - Taxa em decimal:</strong><br>
+                i = 5,4% = 5,4 ÷ 100 = 0,054<br><br>
+                
+                <strong>⏰ PASSO 3 - Tempo em semestres:</strong><br>
+                t = 2 anos e 6 meses<br>
+                t = 4 semestres + 1 semestre<br>
+                t = 5 semestres<br><br>
+                
+                <strong>➕ PASSO 4 - Juros:</strong><br>
+                J = C × i × t<br>
+                J = 2.400 × 0,054 × 5<br>
+                J = 129,6 × 5<br>
+                J = 648,00<br><br>
+                
+                <strong>💰 PASSO 5 - Montante:</strong><br>
+                M = C + J<br>
+                M = 2.400 + 648<br>
+                M = 3.048,00<br><br>
+                
+                <span class="destaque">✅ Juros = R$ 648,00</span><br>
+                <span class="destaque">✅ Montante = R$ 3.048,00</span>
+            </div>
+        </div>
+        
+        <div class="explicacao-inicial" style="margin-top: 40px;">
+            <h2>🎓 Resumo Final - Macete para Não Errar!</h2>
+            <p><strong>1.</strong> Sempre transforme a porcentagem em decimal (divida por 100)</p>
+            <p><strong>2.</strong> A taxa e o tempo DEVEM estar na mesma unidade:</p>
+            <p style="margin-left: 20px;">• Taxa ao mês → tempo em meses</p>
+            <p style="margin-left: 20px;">• Taxa ao ano → tempo em anos</p>
+            <p style="margin-left: 20px;">• Taxa ao semestre → tempo em semestres</p>
+            <p><strong>3.</strong> Use J = C × i × t para calcular os juros</p>
+            <p><strong>4.</strong> Use M = C + J para calcular o montante</p>
+            <p><strong>5.</strong> Sempre escreva as respostas com R$ e duas casas decimais</p>
+        </div>
+        
+        <div class="btn-container">
+            <button class="btn-download" onclick="window.print()">📥 Baixar/Imprimir (Ctrl+P)</button>
+        </div>
+    </div>
+</body>
+</html>
